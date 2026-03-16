@@ -11,7 +11,9 @@ AGENT_NAME = "my-agent-framework"
 AGENT_INSTRUCTIONS = "You are a helpful assistant."
 
 
-# Example tool — Agent Framework uses @tool + Annotated[type, Field(...)] for parameter descriptions
+# Use Annotated and Field from Pydantic to provide detailed descriptions that help the 
+# AI understand the function's purpose and how to use its parameters. 
+# The more descriptive your annotations, the better the AI can understand when and how to call your function.
 @tool
 def add_numbers(
     a: Annotated[float, Field(description="First number")],
