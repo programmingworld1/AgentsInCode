@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd C:/Users/sof_1/Desktop/AgentsCode && .venv/Scripts/python.exe -c \"from azure.ai.projects.models import HostedAgentDefinition; import inspect; print\\(inspect.getsource\\(HostedAgentDefinition\\)\\)\")",
+      "Bash(cd C:/Users/sof_1/Desktop/AgentsCode && .venv/Scripts/python.exe -c \"from azure.ai.projects.models import PromptAgentDefinition; import inspect; print\\(inspect.getsource\\(PromptAgentDefinition\\)\\)\")"
+    ]
+  }
+}
