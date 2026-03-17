@@ -42,6 +42,9 @@ async def main():
         tools=[],
     )
 
+    # Use the ConcurrentBuilder class to create a workflow that can run multiple agents in parallel. 
+    # Add your agent instances as participants using the participants() method, 
+    # then call build() to create the workflow.
     workflow = ConcurrentBuilder(participants=[math_agent, general_agent, creative_agent]).build()
 
     print("Type 'stop' to quit.\n")
@@ -55,6 +58,9 @@ async def main():
 
         results = await workflow.run(user_input)
 
+        # Extract the outputs from the workflow events using get_outputs(). 
+        # The results contain the combined conversations from all agents, with each agent's response 
+        # included in the final output.
         print("\n--- Results ---")
         for event in results:
             if event.type == "output":
