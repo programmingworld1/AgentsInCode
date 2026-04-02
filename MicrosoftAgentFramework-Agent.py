@@ -43,7 +43,7 @@ async def main():
     print(f"Agent '{AGENT_NAME}' started (Microsoft Agent Framework).\n")
     print("Type 'stop' to quit.\n")
 
-    # AgentSession maintains conversation history across turns
+    # AgentSession is a class provided by the Microsoft Agent Framework that maintains conversation history and context across multiple turns of interaction with an agent. By creating an instance of AgentSession and passing it to the agent's run method, you enable the agent to remember previous interactions, allowing for more coherent and context-aware conversations. This is especially useful in scenarios where the user may ask follow-up questions or refer back to earlier parts of the conversation, as the agent can use the session to access that historical information and provide more relevant responses.    # AgentSession maintains conversation history across turns
     session = AgentSession()
 
     while True:
